@@ -7,9 +7,9 @@ Version:	1.0.0
 Release:	0.1
 License:	BSD
 Group:		Networking/Daemons
-Source0:	http://www.klomp.org/mod_%{mod_name}/mod_%{mod_name}-%{version}.tar.gz
+Source0:	http://www.klomp.org/mod_hosts_access/mod_%{mod_name}-%{version}.tar.gz
 # Source0-md5:	3720e303cfde50e94586f484a903aa41
-URL:		http://www.klomp.org/mod_%{mod_name}/
+URL:		http://www.klomp.org/mod_hosts_access/
 BuildRequires:	apache1-devel
 BuildRequires:	libwrap-devel
 Requires(post,preun):	%{apxs}
@@ -25,7 +25,7 @@ files to configure access to your apache webserver.
 
 %description -l pl
 Mod_hosts_access pozwala u¿ywaæ plików hosts.allow i hosts.deny do
-okre¶lania dostêpu do zasobów apacza.
+okre¶lania dostêpu do zasobów serwera WWW apache.
 
 %prep
 %setup -q -n mod_%{mod_name}-%{version}
