@@ -4,7 +4,7 @@ Summary:	Apache module: access defined by hosts.allow/hosts.deny
 Summary(pl):	Modu³ do apache: dostêp na podstawie hosts.allow/hosts.deny
 Name:		apache1-mod_%{mod_name}
 Version:	1.0.0
-Release:	0.2
+Release:	0.3
 License:	BSD
 Group:		Networking/Daemons
 Source0:	http://www.klomp.org/mod_hosts_access/mod_%{mod_name}-%{version}.tar.gz
@@ -12,7 +12,6 @@ Source0:	http://www.klomp.org/mod_hosts_access/mod_%{mod_name}-%{version}.tar.gz
 URL:		http://www.klomp.org/mod_hosts_access/
 BuildRequires:	apache1-devel >= 1.3.33-2
 BuildRequires:	libwrap-devel
-Requires(post,preun):	%{apxs}
 Requires:	apache1 >= 1.3.33-2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,7 +49,7 @@ if [ -f /var/lock/subsys/apache ]; then
 	/etc/rc.d/init.d/apache restart 1>&2
 fi
 
-%preun
+%postun
 if [ "$1" = "0" ]; then
 	if [ -f /var/lock/subsys/apache ]; then
 		/etc/rc.d/init.d/apache restart 1>&2
