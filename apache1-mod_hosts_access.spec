@@ -1,5 +1,5 @@
 %define		mod_name	hosts_access
-%define 	apxs		%{_sbindir}/apxs1
+%define 	apxs		/usr/sbin/apxs1
 Summary:	Apache module: access defined by hosts.allow/hosts.deny
 Summary(pl):	Modu³ do apache: dostêp na podstawie hosts.allow/hosts.deny
 Name:		apache1-mod_%{mod_name}
@@ -17,7 +17,7 @@ Requires:	apache1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_pkglibdir	%(%{apxs} -q LIBEXECDIR)
-%define		_sysconfdir     /etc/httpd
+%define		_sysconfdir	%(%{apxs} -q SYSCONFDIR)
 
 %description
 Mod_hosts_access allows you to use the hosts.allow and hosts.deny
