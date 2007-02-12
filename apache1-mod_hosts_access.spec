@@ -1,7 +1,7 @@
 %define		mod_name	hosts_access
 %define 	apxs		/usr/sbin/apxs1
 Summary:	Apache module: access defined by hosts.allow/hosts.deny
-Summary(pl.UTF-8):   Moduł do apache: dostęp na podstawie hosts.allow/hosts.deny
+Summary(pl.UTF-8):	Moduł do apache: dostęp na podstawie hosts.allow/hosts.deny
 Name:		apache1-mod_%{mod_name}
 Version:	1.0.0
 Release:	0.3
