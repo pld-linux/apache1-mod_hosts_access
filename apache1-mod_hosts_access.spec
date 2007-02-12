@@ -1,7 +1,7 @@
 %define		mod_name	hosts_access
 %define 	apxs		/usr/sbin/apxs1
 Summary:	Apache module: access defined by hosts.allow/hosts.deny
-Summary(pl):	Modu³ do apache: dostêp na podstawie hosts.allow/hosts.deny
+Summary(pl.UTF-8):   ModuÅ‚ do apache: dostÄ™p na podstawie hosts.allow/hosts.deny
 Name:		apache1-mod_%{mod_name}
 Version:	1.0.0
 Release:	0.3
@@ -23,9 +23,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Mod_hosts_access allows you to use the hosts.allow and hosts.deny
 files to configure access to your apache webserver.
 
-%description -l pl
-Mod_hosts_access pozwala u¿ywaæ plików hosts.allow i hosts.deny do
-okre¶lania dostêpu do zasobów serwera WWW apache.
+%description -l pl.UTF-8
+Mod_hosts_access pozwala uÅ¼ywaÄ‡ plikÃ³w hosts.allow i hosts.deny do
+okreÅ›lania dostÄ™pu do zasobÃ³w serwera WWW apache.
 
 %prep
 %setup -q -n mod_%{mod_name}-%{version}
