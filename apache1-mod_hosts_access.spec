@@ -10,7 +10,7 @@ Group:		Networking/Daemons
 Source0:	http://www.klomp.org/mod_hosts_access/mod_%{mod_name}-%{version}.tar.gz
 # Source0-md5:	3720e303cfde50e94586f484a903aa41
 URL:		http://www.klomp.org/mod_hosts_access/
-BuildRequires:	apache1-devel >= 1.3.33-2
+BuildRequires:	apache1-devel >= 1.3.39
 BuildRequires:	libwrap-devel
 BuildRequires:	rpmbuild(macros) >= 1.268
 Requires:	apache1 >= 1.3.33-2
